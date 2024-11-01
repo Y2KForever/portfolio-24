@@ -82,7 +82,6 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   scroll-snap-align: center;
   perspective: 500px;
 }
@@ -90,6 +89,7 @@ section {
 section > div {
   max-height: 90vh;
   margin: 20px;
+  margin-top: 0px;
   overflow: hidden;
   border-radius: 5px;
 }

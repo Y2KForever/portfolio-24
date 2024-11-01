@@ -7,7 +7,6 @@ import { User } from '@/assets/icons/user';
 import { Folder } from '@/assets/icons/folder';
 import { Instagram } from '@/assets/icons/instagram';
 import { Spotify } from '@/assets/icons/spotify';
-import { PaintBrush } from '@/assets/icons/paintBrush';
 
 interface MenuProps {
   refs: Refs;
@@ -29,31 +28,24 @@ export const Menu = ({ refs }: MenuProps) => {
     },
     {
       onClick: () => {
-        refs[2].current?.scrollIntoView({ behavior: 'smooth' });
+        refs.portfolio.current?.scrollIntoView({ behavior: 'smooth' });
       },
       icon: <Folder />,
-      id: 'something',
+      id: 'portfolio',
     },
     {
       onClick: () => {
-        refs[3].current?.scrollIntoView({ behavior: 'smooth' });
+        refs.instagram.current?.scrollIntoView({ behavior: 'smooth' });
       },
       icon: <Instagram />,
-      id: 'something',
+      id: 'instagram',
     },
     {
       onClick: () => {
-        refs[3].current?.scrollIntoView({ behavior: 'smooth' });
+        refs.spotify.current?.scrollIntoView({ behavior: 'smooth' });
       },
       icon: <Spotify />,
-      id: 'something',
-    },
-    {
-      onClick: () => {
-        refs[3].current?.scrollIntoView({ behavior: 'smooth' });
-      },
-      icon: <PaintBrush />,
-      id: 'something',
+      id: 'spotify',
     },
     {
       onClick: () => setTheme(theme === 'light' ? 'dark' : 'light'),

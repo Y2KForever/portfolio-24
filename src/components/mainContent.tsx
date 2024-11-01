@@ -4,6 +4,7 @@ import { Refs } from '@/App';
 interface SectionsData {
   id: string | number;
   element: React.ReactNode;
+  height: number;
 }
 
 interface MainContentProps {
@@ -16,7 +17,7 @@ export const MainContent = ({ refs, sectionsData }: MainContentProps) => {
     <>
       <div id="mainContent">
         {sectionsData.map((section) => (
-          <Sections ref={refs[section.id]} id={section.id.toString()} key={section.id} element={section.element} />
+          <Sections height={section.height} ref={refs[section.id]} id={section.id.toString()} key={section.id} element={section.element} />
         ))}
       </div>
     </>
